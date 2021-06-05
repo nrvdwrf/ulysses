@@ -1,0 +1,6 @@
+src-cordova
+src-electron
+node_modules
+test
+Dockerfile
+*.md

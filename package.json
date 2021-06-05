@@ -1,0 +1,87 @@
+{
+  "name": "ligna-server",
+  "version": "0.0.1",
+  "description": "LIGNA Content delivery server",
+  "productName": "LIGNA Server",
+  "author": "LIGNA",
+  "private": true,
+  "scripts": {
+    "dev-ui": "quasar dev",
+    "lint": "eslint --ext .js,.vue ./",
+    "test": "npm run lint && npm run mocha",
+    "feathers-lint": "eslint src/api/. test/. --config .eslintrc.json --fix",
+    "feathers-dev": "nodemon src/api/",
+    "start": "node src/api/",
+    "mocha": "mocha test/ --recursive --exit"
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^4.5.11",
+    "@feathersjs/authentication-client": "^4.5.11",
+    "@feathersjs/authentication-local": "^4.5.11",
+    "@feathersjs/authentication-oauth": "^4.5.11",
+    "@feathersjs/configuration": "^4.5.11",
+    "@feathersjs/errors": "^4.5.11",
+    "@feathersjs/express": "^4.5.11",
+    "@feathersjs/feathers": "^4.5.11",
+    "@feathersjs/rest-client": "^4.5.11",
+    "@feathersjs/transport-commons": "^4.5.11",
+    "@quasar/extras": "^1.0.0",
+    "@vue/composition-api": "^1.0.0-rc.10",
+    "compression": "^1.7.4",
+    "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "feathers-hooks-common": "^5.0.6",
+    "feathers-mongoose": "^8.3.3",
+    "feathers-vuex": "^3.15.0",
+    "helmet": "^4.6.0",
+    "mongodb-core": "^3.2.7",
+    "mongoose": "^5.12.12",
+    "quasar": "^1.0.0",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-vue": "^7.7.0",
+    "eslint-webpack-plugin": "^2.4.0",
+    "mocha": "^8.4.0",
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0"
+  },
+  "directories": {
+    "lib": "src/api",
+    "test": "test/",
+    "config": "config/"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": "^14.0.0",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": []
+  }
+}
