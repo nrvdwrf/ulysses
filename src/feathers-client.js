@@ -6,8 +6,11 @@ import feathersVuex from 'feathers-vuex'
 import axios from 'axios'
 
 const feathersClient = feathers()
-  .configure(rest(process.env.API_HOST).axios(axios))
-  .configure(auth({ storage: window.localStorage, accessToken: localStorage.getItem('feathers-jwt') }))
+  .configure(rest(process.env.API_HOST || 'http://localhost:3030').axios(axios))
+  .configure(auth({
+    storage: window.localStorage,
+    accessToken: localStorage.getItem('feathers-jwt')
+  }))
   .hooks({
     before: {
       all: [

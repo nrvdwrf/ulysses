@@ -4,12 +4,12 @@
  */
 
 // get git info from command line
-// const commitHash = require('child_process')
-//   .execSync('git rev-parse --short HEAD')
-//   .toString().trim()
-// const branchName = require('child_process')
-//   .execSync('git rev-parse --abbrev-ref HEAD')
-//   .toString().trim()
+const commitHash = require('child_process')
+  .execSync('git rev-parse --short HEAD')
+  .toString().trim()
+const branchName = require('child_process')
+  .execSync('git rev-parse --abbrev-ref HEAD')
+  .toString().trim()
 
 // Configuration for your app
 // https://v1.quasar.dev/quasar-cli/quasar-conf-js
@@ -52,7 +52,8 @@ module.exports = function (/* ctx */) {
 
     // Full list of options: https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-build
     build: {
-      vueRouterMode: 'hash', // available values: 'hash', 'history'
+      scopeHoisting: true,
+      vueRouterMode: 'history', // available values: 'hash', 'history'
 
       // transpile: false,
 
@@ -83,11 +84,11 @@ module.exports = function (/* ctx */) {
     },
 
     env: {
-      API_HOST: JSON.stringify(process.env.API_HOST || ''),
+      API_HOST: JSON.stringify(process.env.API_HOST || 'http://localhost:3030'),
       UI_HOST: JSON.stringify(process.env.UI_HOST || 'http://localhost:8080'),
       BUILD_TIME: JSON.stringify(Date.now()),
-      // COMMIT_HASH: JSON.stringify(commitHash),
-      // BRANCH_NAME: JSON.stringify(branchName)
+      COMMIT_HASH: JSON.stringify(commitHash),
+      BRANCH_NAME: JSON.stringify(branchName)
     },
 
     // Full list of options: https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
