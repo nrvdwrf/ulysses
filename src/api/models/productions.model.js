@@ -9,7 +9,12 @@ module.exports = function (app) {
   const schema = new Schema({
     title: { type: String, required: true },
     abstract: { type: String },
-    description: { type: String }
+    description: { type: String },
+    assets: [{
+      role: { type: String },
+      url: { type: String },
+      type: { type: String }
+    }]
   }, {
     timestamps: true
   })
