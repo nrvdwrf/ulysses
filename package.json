@@ -38,6 +38,7 @@
     "mongodb-core": "^3.2.7",
     "mongoose": "^5.12.12",
     "quasar": "^1.0.0",
+    "readline-sync": "^1.4.10",
     "serve-favicon": "^2.5.0",
     "winston": "^3.3.3"
   },
