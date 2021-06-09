@@ -8,6 +8,7 @@ const logger = require('./logger')
 const feathers = require('@feathersjs/feathers')
 const configuration = require('@feathersjs/configuration')
 const express = require('@feathersjs/express')
+const { errorHandler } = require('@feathersjs/express')
 
 const middleware = require('./middleware')
 const services = require('./services')
@@ -50,6 +51,12 @@ app.configure(channels)
 // Configure a middleware for 404s and the error handler
 app.use(express.notFound())
 app.use(express.errorHandler({ logger }))
+app.use(errorHandler({
+  logger,
+  html: {
+    404: app.get('public') + '/index.html'
+  }
+}))
 
 app.hooks(appHooks)
 
