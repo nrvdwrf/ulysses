@@ -9,8 +9,7 @@
           icon="menu"
           aria-label="Menu")
 
-        q-toolbar-title Quasar App
-        div Quasar v{{ $q.version }}
+        q-toolbar-title LIGNA Server
 
     q-page-container
       router-view
