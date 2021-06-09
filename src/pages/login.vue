@@ -1,5 +1,5 @@
 <template lang="pug">
-  q-page.flex.flex-center
+  q-page
     .q-pa-md(style="min-width: 400px")
       h3 {{ $t('labels.login') }}
       q-form(@submit="login").q-gutter-md.full-width

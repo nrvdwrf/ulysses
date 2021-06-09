@@ -4,9 +4,6 @@
 </template>
 <script>
 export default {
-  name: 'App',
-  created () {
-    return this.$store.dispatch('users/find', {})
-  }
+  name: 'App'
 }
 </script>

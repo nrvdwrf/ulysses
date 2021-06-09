@@ -41,6 +41,7 @@
     "quasar": "^1.0.0",
     "readline-sync": "^1.4.10",
     "serve-favicon": "^2.5.0",
+    "vue-i18n": "^8.0.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {
