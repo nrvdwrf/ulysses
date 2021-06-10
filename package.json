@@ -36,6 +36,7 @@
     "feathers-vuex": "^3.15.0",
     "helmet": "^4.6.0",
     "luxon": "^1.27.0",
+    "minio": "^7.0.18",
     "mongodb-core": "^3.2.7",
     "mongoose": "^5.12.12",
     "quasar": "^1.0.0",
