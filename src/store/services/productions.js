@@ -3,7 +3,7 @@ import feathersClient, {
   BaseModel
 } from '../../feathers-client'
 
-class User extends BaseModel {
+class Production extends BaseModel {
   // constructor (data, options) {
   //   super(data, options)
   // }
@@ -16,7 +16,7 @@ class User extends BaseModel {
 }
 const servicePath = 'productions'
 const servicePlugin = makeServicePlugin({
-  Model: User,
+  Model: Production,
   service: feathersClient.service(servicePath),
   servicePath
 })
