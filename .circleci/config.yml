@@ -25,8 +25,8 @@ jobs:
           command: |
             set +o pipefail
             docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-            docker build --no-cache -t nrvdwrf/ligna-server:latest .
-            docker push nrvdwrf/ligna-server:latest
+            docker build --no-cache -t nrvdwrf/ulysses:latest .
+            docker push nrvdwrf/ulysses:latest
   release_branch:
     working_directory: /app
     docker:
@@ -40,8 +40,8 @@ jobs:
           command: |
             set +o pipefail
             docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-            docker build --no-cache -t nrvdwrf/ligna-server:${CIRCLE_BRANCH} .
-            docker push nrvdwrf/ligna-server:${CIRCLE_BRANCH}
+            docker build --no-cache -t nrvdwrf/ulysses:${CIRCLE_BRANCH} .
+            docker push nrvdwrf/ulysses:${CIRCLE_BRANCH}
   release_tag:
     working_directory: /app
     docker:
@@ -55,8 +55,8 @@ jobs:
           command: |
             set +o pipefail
             docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-            docker build --no-cache -t nrvdwrf/ligna-server:${CIRCLE_TAG} .
-            docker push nrvdwrf/ligna-server:${CIRCLE_TAG}
+            docker build --no-cache -t nrvdwrf/ulysses:${CIRCLE_TAG} .
+            docker push nrvdwrf/ulysses:${CIRCLE_TAG}
 
 workflows:
   version: 2

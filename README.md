@@ -1,6 +1,6 @@
-# LIGNA Server (ligna-server)
+# Ulysses Server (ulysses-server)
 
-LIGNA Content delivery server
+Ulysses CDS
 
 ## Install the dependencies
 ```bash

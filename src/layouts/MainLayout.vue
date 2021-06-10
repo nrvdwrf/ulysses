@@ -15,7 +15,7 @@
             q-item-section
               q-item-label {{ $t('labels.buckets') }}
 
-        q-toolbar-title LIGNA Server
+        q-toolbar-title Ulysses Server
 
         template(v-if="isAuthenticated")
           q-btn.q-mr-md(flat :label="user.name")

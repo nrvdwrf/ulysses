@@ -28,7 +28,7 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb://localhost:27017/ligna_server",
+  "mongodb": "mongodb://localhost:27017/ulysses_server",
   "minio": {
     "endPoint": "localhost",
     "port": 9000,

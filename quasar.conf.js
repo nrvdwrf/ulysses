@@ -140,9 +140,9 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'LIGNA Server',
-        short_name: 'LIGNA Server',
-        description: 'LIGNA Content delivery server',
+        name: 'Ulysses Server',
+        short_name: 'Ulysses Server',
+        description: 'Ulysses CDS',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -207,7 +207,7 @@ module.exports = function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'ligna-server'
+        appId: 'ulysses-server'
       },
 
       // More info: https://v1.quasar.dev/quasar-cli/developing-electron-apps/node-integration

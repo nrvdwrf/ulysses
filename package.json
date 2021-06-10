@@ -1,9 +1,9 @@
 {
-  "name": "ligna-server",
+  "name": "ulysses",
   "version": "0.0.1",
-  "description": "LIGNA Content delivery server",
-  "productName": "LIGNA Server",
-  "author": "LIGNA",
+  "description": "Ulysses CDS",
+  "productName": "Ulysses Server",
+  "author": "NRVDWRF Inc.",
   "private": true,
   "scripts": {
     "dev-ui": "quasar dev",
