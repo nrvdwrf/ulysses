@@ -19,8 +19,8 @@
     template(v-slot:body-cell-actions="props")
       q-td
         q-btn.float-right(v-if="!noDelete", flat, icon="delete", @click="deleteItem = props.row")
-        q-btn.float-right(flat, icon="edit",
-          @click="$router.push({ name: `${resource}.edit`, params: { id: props.row._id } })")
+        q-btn.float-right(flat, icon="edit", tag="a",
+          :to="{ name: `${resource}.edit`, params: { id: props.row._id } }")
 </template>
 
 <script>
@@ -40,7 +40,11 @@
       query: Object,
       columns: Array,
       noAdd: Boolean,
-      noDelete: Boolean
+      noDelete: Boolean,
+      overrideUpdated: String,
+      noUpdated: Boolean,
+      overrideCreated: String,
+      noCreated: Boolean
     },
     data () {
       let settings = localStorage.getItem(`ListTable_${this.id || this.$route.name}_settings`)
@@ -85,24 +89,32 @@
             filter: true
           }]
         }
+        if (!this.noUpdated) {
+          columns = columns.concat([
+            {
+              name: this.overrideUpdated || 'updatedAt',
+              field: this.overrideUpdated || 'updatedAt',
+              label: this.$t('fields.updated_at'),
+              align: 'right',
+              sortable: true,
+              format: val => val ? DateTime.fromISO(val).toLocaleString(DateTime.DATETIME_SHORT) : ''
+            }
+          ])
+        }
+        if (!this.noCreated) {
+          columns = columns.concat([
+            {
+              name: this.overrideCreated || 'createdAt',
+              field: this.overrideCreated || 'createdAt',
+              required: true,
+              label: this.$t('fields.created_at'),
+              align: 'right',
+              sortable: true,
+              format: val => DateTime.fromISO(val).toLocaleString(DateTime.DATETIME_SHORT)
+            }
+          ])
+        }
         columns = columns.concat([
-          {
-            name: 'updatedAt',
-            field: 'updatedAt',
-            label: this.$t('fields.updated_at'),
-            align: 'right',
-            sortable: true,
-            format: val => val ? DateTime.fromISO(val).toLocaleString(DateTime.DATETIME_SHORT) : ''
-          },
-          {
-            name: 'createdAt',
-            field: 'createdAt',
-            required: true,
-            label: this.$t('fields.created_at'),
-            align: 'right',
-            sortable: true,
-            format: val => DateTime.fromISO(val).toLocaleString(DateTime.DATETIME_SHORT)
-          },
           {
             name: 'actions',
             sortable: false,
