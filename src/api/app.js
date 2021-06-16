@@ -26,9 +26,10 @@ app.use(helmet({
   contentSecurityPolicy: false
 }))
 app.use(cors())
-app.use(compress())
+app.use(compress())Server
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use('/', express.static(app.get('public')))
 
 // Set up Plugins and providers
 app.configure(express.rest())
@@ -44,8 +45,7 @@ app.configure(services)
 app.configure(channels)
 
 // Configure a middleware for 404s and the error handler
-app.use(express.notFound())
-app.use(express.errorHandler({ logger }))
+// app.use(express.notFound())
 app.use(errorHandler({
   logger,
   html: {
