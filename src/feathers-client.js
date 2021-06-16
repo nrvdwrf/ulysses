@@ -1,16 +1,11 @@
 import feathers from '@feathersjs/feathers'
 import rest from '@feathersjs/rest-client'
-import auth from '@feathersjs/authentication-client'
 import { iff, discard } from 'feathers-hooks-common'
 import feathersVuex from 'feathers-vuex'
 import axios from 'axios'
 
 const feathersClient = feathers()
   .configure(rest(process.env.API_HOST || 'http://localhost:3030').axios(axios))
-  .configure(auth({
-    storage: window.localStorage,
-    accessToken: localStorage.getItem('feathers-jwt')
-  }))
   .hooks({
     before: {
       all: [
@@ -27,7 +22,6 @@ export default feathersClient
 // Setting up feathers-vuex
 const {
   makeServicePlugin,
-  makeAuthPlugin,
   BaseModel,
   models,
   FeathersVuex
@@ -37,4 +31,4 @@ const {
   whitelist: ['$regex', '$options']
 })
 
-export { makeAuthPlugin, makeServicePlugin, BaseModel, models, FeathersVuex }
+export { makeServicePlugin, BaseModel, models, FeathersVuex }
