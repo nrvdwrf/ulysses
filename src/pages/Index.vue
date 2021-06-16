@@ -1,5 +1,8 @@
 <template lang="pug">
-  q-page.flex.flex-center
+  q-page
+    .q-ma-lg
+      .col
+        h1.q-mb-md.text-h1 LIGNA.app
 </template>
 
 <script>
