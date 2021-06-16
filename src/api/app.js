@@ -26,7 +26,7 @@ app.use(helmet({
   contentSecurityPolicy: false
 }))
 app.use(cors())
-app.use(compress())Server
+app.use(compress())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use('/', express.static(app.get('public')))
