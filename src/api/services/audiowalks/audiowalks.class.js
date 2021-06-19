@@ -22,7 +22,7 @@ exports.Audiowalks = class Audiowalks {
   get (id, params) {
     if (params.query.jpg) return this.client.getObject('audiowalks', `${id}.jpg`)
     if (params.query.mp3) return this.client.getObject('audiowalks', `${params.query.mp3}.mp3`)
-    if (params.query.md) return this.client.getObject('audiowalks', `${id}.md`)
+    if (params.query.md) return this.client.getObject('audiowalks', `${params.query.md}.md`)
     return this.client.getObject('audiowalks', `${id}.json`)
   }
 }
