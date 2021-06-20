@@ -1,7 +1,9 @@
 <template lang="pug">
   q-page
     .q-ma-lg
-      .q-mb-md.text-h3 Datenschutzerkl&auml;rung
+      .q-mb-md.text-h4 Datenschutzerkl&auml;rung
+      .q-mb-md
+        p Die "LIGNA Audiowalks" App speichert keine Nutzerdaten und es werden keine Nutzeraktivitäten protokolliert (Tracking). Eine Anmeldung ist nicht erforderlich, das Angebot ist kostenlos.
       .q-mb-md
         p
           | Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:
@@ -62,13 +64,7 @@
       .q-mb-md.text-h5 Fragen an den Datenschutzbeauftragten
       .q-mb-md
         p
-          | Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die f&uuml;r den Datenschutz verantwortliche Person in unserer Organisation:
-        p
-        p
-          em
-            | Die Datenschutzerkl&auml;rung wurde mithilfe der activeMind AG erstellt, den Experten f&uuml;r
-            a(href='https://www.activemind.de/datenschutz/datenschutzbeauftragter/' target='_blank' rel='noopener') externe Datenschutzbeauftragte
-            |  (Version #2020-09-30).
+          | Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail.
 
 </template>
 
