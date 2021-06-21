@@ -2,8 +2,9 @@
   q-layout(view="lHh Lpr lFf")
     q-footer
       q-toolbar
-        q-btn(type="a" href="http://www.ligna.org/impressum/" flat) Impressum
+        q-btn(type="a" :to="{ name: 'index' }" flat) Start
         q-btn(type="a" :to="{ name: 'privacy' }" flat) Datenschutz
+        q-btn(type="a" href="http://www.ligna.org/impressum/" flat) Impressum
     q-page-container
       router-view
 </template>
