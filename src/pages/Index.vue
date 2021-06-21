@@ -5,7 +5,7 @@
         .q-mb-md.text-h3 LIGNA.app
         .q-mb-md.text-h5.caption Audiowalks der Gruppe LIGNA als App-Download.
         q-separator.q-mb-lg
-        p.q-mb-lg
+        p.q-mb-lg.text-body1
           | Mit der LIGNA-App lassen sich unsere Audiowalks bequem und coronagerecht durchführen.
           br
           | Das Handy wird zum Abspielgerät für den vom Zufall bestimmten, individuellen Walk durch die Stadt.
@@ -19,7 +19,7 @@
         .text-body1
           a(href="http://ligna.org/kontakt") Kontaktieren Sie uns hier
       .col-md-4
-        q-banner.q-mb-lg Sie können diese App für Android- und iOS-Endgeräte in Kürze hier herunterladen.
+        q-banner.q-mb-lg.text-body1 Sie können diese App für Android- und iOS-Endgeräte in Kürze hier herunterladen.
         q-btn(type="a" href="http://ligna.org" flat color="secondary") Weitere Informationen zu LIGNA
 </template>
 
