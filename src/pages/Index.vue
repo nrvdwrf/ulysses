@@ -1,7 +1,7 @@
 <template lang="pug">
-  q-page
+  q-page.q-pa-md
     .row.q-ma-lg.g.q-col-gutter-lg
-      .col-md-8
+      .col
         .q-mb-md.text-h3 LIGNA.app
         .q-mb-md.text-h5.caption Audiowalks der Gruppe LIGNA als App-Download.
         q-separator.q-mb-lg
@@ -18,8 +18,17 @@
         .text-h6.q-mb-md Weitere Fragen zur App oder zur Benutzung?
         .text-body1
           a(href="http://ligna.org/kontakt") Kontaktieren Sie uns hier
-      .col-md-4
-        q-banner.q-mb-lg.text-body1 Sie können diese App für Android- und iOS-Endgeräte in Kürze hier herunterladen.
+      .col-xs-12.col-sm-12.col-md-6.col-lg-4
+        q-banner.full-width.q-pa-md.q-mb-lg.text-body1(rounded)
+          .text-h5.caption.q-mb-lg App Download
+          .row.q-col-gutter-md
+            .col-6
+              a(href="https://apps.apple.com/de/app/ligna-audiowalks/id1573053129")
+                q-img(src="~assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg")
+            .col-6
+              .text-body2 Android folgt in Kürze
+              //a(href="https://appstoreconnect.apple.com/apps/1573053129/appstore/info")
+              //  q-img(src="~assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg")
         q-btn(type="a" href="http://ligna.org" flat color="secondary") Weitere Informationen zu LIGNA
 </template>
 
