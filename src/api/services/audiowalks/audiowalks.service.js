@@ -10,12 +10,18 @@ module.exports = function (app) {
 
   function streamResponse (req, res, next) {
     if (res.hook.result) {
-      const { jpg, mp3, md } = res.hook.params.query
+      const { aac, jpg, m4a, mp3, md } = res.hook.params.query
       if (jpg) {
         res.setHeader('Content-Type', 'image/jpeg')
       }
       if (mp3) {
         res.setHeader('Content-Type', 'audio/mp3')
+      }
+      if (aac) {
+        res.setHeader('Content-Type', 'audio/aac')
+      }
+      if (m4a) {
+        res.setHeader('Content-Type', 'audio/m4a')
       }
       if (md) {
         res.setHeader('Content-Type', 'text/plain')
