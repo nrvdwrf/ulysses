@@ -20,15 +20,14 @@
           a(href="http://ligna.org/kontakt") Kontaktieren Sie uns hier
       .col-xs-12.col-sm-12.col-md-6.col-lg-4
         q-banner.full-width.q-pa-md.q-mb-lg.text-body1(rounded)
-          .text-h5.caption.q-mb-lg App Download
+          .text-h5.caption.q-mb-lg.text-center App Download
           .row.q-col-gutter-md.q-mb-lg
             .col-6
               a(href="https://apps.apple.com/de/app/ligna-audiowalks/id1573053129")
-                q-img(src="~assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg")
+                q-img(src="~assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg" alt="Laden im Apple App-Store" style="margin:6%;width:88%")
             .col-6
-              .text-body2 Google Play Store folgt in Kürze
-              //a(href="https://appstoreconnect.apple.com/apps/1573053129/appstore/info")
-              //  q-img(src="~assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg")
+              a(href="https://play.google.com/store/apps/details?id=org.ligna.app&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1")
+                q-img(src="~assets/de_badge_web_generic.png" alt="Jetzt bei Google Play")
           .row
             .col.text-center
               .text-body2.q-mb-sm Android Nutzer können die App auch direkt auf ihr Gerät laden.
