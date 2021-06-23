@@ -21,14 +21,18 @@
       .col-xs-12.col-sm-12.col-md-6.col-lg-4
         q-banner.full-width.q-pa-md.q-mb-lg.text-body1(rounded)
           .text-h5.caption.q-mb-lg App Download
-          .row.q-col-gutter-md
+          .row.q-col-gutter-md.q-mb-lg
             .col-6
               a(href="https://apps.apple.com/de/app/ligna-audiowalks/id1573053129")
                 q-img(src="~assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg")
             .col-6
-              .text-body2 Android folgt in Kürze
+              .text-body2 Google Play Store folgt in Kürze
               //a(href="https://appstoreconnect.apple.com/apps/1573053129/appstore/info")
               //  q-img(src="~assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg")
+          .row
+            .col.text-center
+              .text-body2.q-mb-sm Android Nutzer können die App auch direkt auf ihr Gerät laden.
+              a(href="/LIGNA_Audiowalks.apk") LIGNA Audiowalks laden
         q-btn(type="a" href="http://ligna.org" flat color="secondary") Weitere Informationen zu LIGNA
 </template>
 
